@@ -42,16 +42,17 @@ star 别忘点上 :kissing_heart:
 Gitee: https://gitee.com/vctgo/vctgo-platform
 
 GitHub: https://github.com/vctgo/vctgo-platform
-## 演示地址(1M小水管请大家适当忍耐)
+## 演示地址
+PS:目前已经改成流量计费满速100M,请大家切勿恶意刷流量
 - http://platform.vctgo.cn
 - 账号密码 admin/admin123
 - 目前演示地址权限全开,请勿随意删除相关数据,本人只做了初始化数据库备份,如果出现异常情况,会选择直接回滚初始版本
-## 文档地址(同步更新若依文档)
+## 文档地址
 - https://doc.vctgo.cn
-## 个人blog(偷懒ing....)
+## 个人blog
 - https://www.vctgo.cn
-## 公众号-VctGo（新建）
-- VctGo 全新公众号，后续会发布一些开发经验和心得，集成文档和移动端小程序
+## 公众号-VctGo
+- VctGo 全新公众号
 ## 有问题请issues有限提问,每天会定时处理!
 
 ## 交流
@@ -110,9 +111,9 @@ GitHub: https://github.com/vctgo/vctgo-platform
 ## 一键式体验(要求linux环境)
 ##### 1.docker安装和docker-compose安装请参考文档里的-应用容器部署模块进行安装
 ##### 2.安装完成后下载项目到任意文件夹目录,自行安装 maven,jdk,node环境 下面简单提供三个教程链接仅供参考
-      - https://blog.csdn.net/weixin_42266606/article/details/80863781  --jdk安装
-      - https://www.cnblogs.com/116970u/p/11211963.html  --maven安装
-      - https://www.cnblogs.com/guigushanren/p/10175946.html --node安装
+ - [Centos7安装JDK8](https://www.vctgo.cn/archives/centos7-an-zhuang-jdk18-tu-wen-jiao-cheng)
+ - [Centos7安装maven](https://www.vctgo.cn/archives/centos7-an-zhuang-maven)
+ - [Centos7安装nodejs14](https://www.vctgo.cn/archives/centos7-an-zhuang-nodejs14)
 ##### 3.脚本执行
       - 1.cd ./docker 目录下 执行 copy.sh 脚本会自动进行打包编译和copy
       - 2.首先执行 sh deploy.sh base 命令进行 nacos,mysql,redis的初始化,初始化完成后建议等待10秒后执行查下一步
@@ -121,13 +122,13 @@ GitHub: https://github.com/vctgo/vctgo-platform
 
 ## 功能截图
 
-![Vctgo-Platform1](https://www.vctgo.cn:39000/vctgo/vctgo-1.png)
-![Vctgo-Platform2](https://www.vctgo.cn:39000/vctgo/vctgo-2.png)
-![Vctgo-Platform3](https://www.vctgo.cn:39000/vctgo/vctgo-3.png)
-![Vctgo-Platform4](https://www.vctgo.cn:39000/vctgo/vctgo-4.png)
-![Vctgo-Platform4](https://www.vctgo.cn:39000/vctgo/vctgo-5.png)
-![Vctgo-Platform4](https://www.vctgo.cn:39000/vctgo/vctgo-6.png)
-![Vctgo-Platform4](https://www.vctgo.cn:39000/vctgo/vctgo-7.png)
+![Vctgo-Platform4](./doc/readme/vctgo-1.png)
+![Vctgo-Platform1](./doc/readme/vctgo-2.png)
+![Vctgo-Platform3](./doc/readme/vctgo-3.png)
+![Vctgo-Platform4](./doc/readme/vctgo-4.png)
+![Vctgo-Platform4](./doc/readme/vctgo-5.png)
+![Vctgo-Platform2](./doc/readme/vctgo-6.png)
+![Vctgo-Platform4](./doc/readme/vctgo-7.png)
 
 
 
