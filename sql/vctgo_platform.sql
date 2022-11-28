@@ -192,7 +192,6 @@ CREATE TABLE `monitor_cache` (
   `user_password` varchar(255) DEFAULT NULL COMMENT '用户密码',
   `ip_port` int(255) NOT NULL DEFAULT '6379' COMMENT '系统端口',
   `rsa_addr` varchar(500) DEFAULT NULL COMMENT '公钥地址',
-  `is_online` int(2) NOT NULL DEFAULT '0' COMMENT '是否在线 0在线 1离线',
   `user_phone` varchar(255) DEFAULT NULL COMMENT '告警手机',
   `user_email` varchar(255) DEFAULT NULL COMMENT '告警邮件',
   `message_type` int(2) DEFAULT NULL COMMENT '告警类型 0 手机 1邮件',
@@ -308,6 +307,7 @@ COMMIT;
 DROP TABLE IF EXISTS `sys_demo`;
 CREATE TABLE `sys_demo` (
   `demo_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '测试ID',
+  `dept_id` bigint NOT NULL COMMENT '部门ID',
   `demo_name` varchar(30) NOT NULL COMMENT '测试账号',
   `create_by` varchar(64) DEFAULT '' COMMENT '创建者',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
@@ -319,13 +319,6 @@ CREATE TABLE `sys_demo` (
   KEY `idx_demo_tenant` (`tenant_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=utf8mb4 COMMENT='测试表';
 
--- ----------------------------
--- Records of sys_demo
--- ----------------------------
-BEGIN;
-INSERT INTO `sys_demo` VALUES (107, '432123123', 'admin', '2022-04-10 13:42:46', 'admin', '2022-04-10 13:43:17', '3241233122342', 9999);
-INSERT INTO `sys_demo` VALUES (113, '311', 'wonders', '2022-04-12 11:48:42', NULL, NULL, '1313', 1111);
-COMMIT;
 
 -- ----------------------------
 -- Table structure for sys_dept
@@ -636,8 +629,8 @@ CREATE TABLE `sys_notice` (
 -- Records of sys_notice
 -- ----------------------------
 BEGIN;
-INSERT INTO `sys_notice` VALUES (1, '温馨提醒：2018-07-01 盛虹新版本发布啦', '2', 0xE696B0E78988E69CACE58685E5AEB9, '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:36:11', '管理员', 9999);
-INSERT INTO `sys_notice` VALUES (2, '维护通知：2018-07-01 盛虹系统凌晨维护', '1', 0xE7BBB4E68AA4E58685E5AEB9, '0', 'admin', '2022-03-07 15:41:18', '', NULL, '管理员', 9999);
+INSERT INTO `sys_notice` VALUES (1, '温馨提醒：2018-07-01 Vctgo新版本发布啦', '2', 0xE696B0E78988E69CACE58685E5AEB9, '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:36:11', '管理员', 9999);
+INSERT INTO `sys_notice` VALUES (2, '维护通知：2018-07-01 Vctgo系统凌晨维护', '1', 0xE7BBB4E68AA4E58685E5AEB9, '0', 'admin', '2022-03-07 15:41:18', '', NULL, '管理员', 9999);
 INSERT INTO `sys_notice` VALUES (10, '测试通知功能', '1', 0x3C703EE68891E698AFE4B880E4B8AAE9809AE79FA5E58A9FE883BDE79A84E6B58BE8AF95E4BFA1E681AF3C2F703E, '0', 'admin', '2022-03-07 18:37:27', '', NULL, NULL, 9999);
 COMMIT;
 
