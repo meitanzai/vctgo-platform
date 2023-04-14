@@ -49,13 +49,13 @@ CREATE TABLE `gen_table` (
 -- Records of gen_table
 -- ----------------------------
 BEGIN;
-INSERT INTO `gen_table` VALUES (1, 'sys_role', '角色信息表', NULL, NULL, 'SysRole', 'crud', 'com.shenghong.system', 'system', 'role', '角色信息', 'shenghong', '0', '/', NULL, 'admin', '2022-03-07 19:28:14', '', NULL, NULL);
-INSERT INTO `gen_table` VALUES (2, 'sys_tenant', '租户表', '', '', 'SysTenant', 'crud', 'com.shenghong.system', 'system', 'tenant', '租户管理', 'shenghong', '0', '/', '{\"parentMenuId\":\"1\"}', 'admin', '2022-03-15 15:26:05', '', '2022-04-11 12:16:49', NULL);
-INSERT INTO `gen_table` VALUES (4, 'sys_tenant_package', '租户套餐表', '', '', 'SysTenantPackage', 'crud', 'com.shenghong.system', 'system', 'tenantpackage', '租户套餐', 'shenghong', '0', '/', '{\"parentMenuId\":\"1\"}', 'admin', '2022-03-19 20:59:00', '', '2022-03-25 16:58:34', NULL);
-INSERT INTO `gen_table` VALUES (5, 'sys_demo', '测试表', NULL, NULL, 'SysDemo', 'crud', 'com.shenghong.system', 'system', 'demo', '测试', 'shenghong', '0', '/', '{}', 'admin', '2022-04-09 16:18:07', '', '2022-04-10 00:40:02', NULL);
-INSERT INTO `gen_table` VALUES (6, 'monitor_sys', '系统监控表', NULL, NULL, 'MonitorSys', 'crud', 'com.shenghong.modules.monitor', 'monitor', 'monitor', '服务器管理', 'shenghong', '0', '/', '{\"parentMenuId\":\"2\"}', 'admin', '2022-04-26 15:02:19', '', '2022-04-26 15:07:06', NULL);
-INSERT INTO `gen_table` VALUES (7, 'monitor_sys_info', '系统监控信息记录表', NULL, NULL, 'MonitorSysInfo', 'crud', 'com.shenghong.modules.monitor', 'monitor', 'monitor', '系统监控信息记录', 'shenghong', '0', '/', '{\"parentMenuId\":\"2\"}', 'admin', '2022-04-26 16:26:36', '', '2022-04-26 16:27:42', NULL);
-INSERT INTO `gen_table` VALUES (8, 'monitor_cache', '缓存列表', NULL, NULL, 'MonitorCache', 'crud', 'com.shenghong.modules.monitor', 'monitor', 'monitor', '缓存管理', 'shenghong', '0', '/', '{\"parentMenuId\":2}', 'admin', '2022-04-27 09:01:48', '', '2022-04-27 09:10:51', NULL);
+INSERT INTO `gen_table` VALUES (1, 'sys_role', '角色信息表', NULL, NULL, 'SysRole', 'crud', 'com.vctgo.system', 'system', 'role', '角色信息', 'vctgo', '0', '/', NULL, 'admin', '2022-03-07 19:28:14', '', '2022-04-11 12:16:49', NULL);
+INSERT INTO `gen_table` VALUES (2, 'sys_tenant', '租户表', '', '', 'SysTenant', 'crud', 'com.vctgo.system', 'system', 'tenant', '租户管理', 'vctgo', '0', '/', '{\"parentMenuId\":\"1\"}', 'admin', '2022-03-15 15:26:05', '', '2022-04-11 12:16:49', NULL);
+INSERT INTO `gen_table` VALUES (4, 'sys_tenant_package', '租户套餐表', '', '', 'SysTenantPackage', 'crud', 'com.vctgo.system', 'system', 'tenantpackage', '租户套餐', 'vctgo', '0', '/', '{\"parentMenuId\":\"1\"}', 'admin', '2022-03-19 20:59:00', '', '2022-03-25 16:58:34', NULL);
+INSERT INTO `gen_table` VALUES (5, 'sys_demo', '测试表', NULL, NULL, 'SysDemo', 'crud', 'com.vctgo.system', 'system', 'demo', '测试', 'vctgo', '0', '/', '{}', 'admin', '2022-04-09 16:18:07', '', '2022-04-10 00:40:02', NULL);
+INSERT INTO `gen_table` VALUES (6, 'monitor_sys', '系统监控表', NULL, NULL, 'MonitorSys', 'crud', 'com.vctgo.modules.monitor', 'monitor', 'monitor', '服务器管理', 'vctgo', '0', '/', '{\"parentMenuId\":\"2\"}', 'admin', '2022-04-26 15:02:19', '', '2022-04-26 15:07:06', NULL);
+INSERT INTO `gen_table` VALUES (7, 'monitor_sys_info', '系统监控信息记录表', NULL, NULL, 'MonitorSysInfo', 'crud', 'com.vctgo.modules.monitor', 'monitor', 'monitor', '系统监控信息记录', 'vctgo', '0', '/', '{\"parentMenuId\":\"2\"}', 'admin', '2022-04-26 16:26:36', '', '2022-04-26 16:27:42', NULL);
+INSERT INTO `gen_table` VALUES (8, 'monitor_cache', '缓存列表', NULL, NULL, 'MonitorCache', 'crud', 'com.vctgo.modules.monitor', 'monitor', 'monitor', '缓存管理', 'vctgo', '0', '/', '{\"parentMenuId\":2}', 'admin', '2022-04-27 09:01:48', '', '2022-04-27 09:10:51', NULL);
 COMMIT;
 
 -- ----------------------------
@@ -299,6 +299,7 @@ INSERT INTO `sys_config` VALUES (2, '用户管理-账号初始密码', 'sys.user
 INSERT INTO `sys_config` VALUES (3, '主框架页-侧边栏主题', 'sys.index.sideTheme', 'theme-light', 'Y', 'admin', '2022-03-07 15:41:18', '', NULL, '深色主题theme-dark，浅色主题theme-light');
 INSERT INTO `sys_config` VALUES (4, '账号自助-是否开启用户注册功能', 'sys.account.registerUser', 'false', 'Y', 'admin', '2022-03-07 15:41:18', '', NULL, '是否开启注册用户功能（true开启，false关闭）');
 INSERT INTO `sys_config` VALUES (5, '通知管理-通知方式', 'sys.message.type', 'false', 'Y', 'admin', '2022-09-14 20:59:08', 'admin', '2022-09-14 20:59:24', '是否开启短信通知(开启后会替代所有通知模块)');
+INSERT INTO `sys_config` VALUES (6, '用户登录-黑名单列表', 'sys.login.blackIPList', '', 'Y', 'admin', sysdate(), '', null, '设置登录IP黑名单限制，多个匹配项以;分隔，支持匹配（*通配、网段）');
 COMMIT;
 
 -- ----------------------------
@@ -347,16 +348,16 @@ CREATE TABLE `sys_dept` (
 -- Records of sys_dept
 -- ----------------------------
 BEGIN;
-INSERT INTO `sys_dept` VALUES (100, 0, '0', '菜盟科技', 0, '数智化部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-06-11 00:49:10', 9999);
-INSERT INTO `sys_dept` VALUES (101, 100, '0,100', '菜盟集团', 1, '数智化部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-06-11 00:49:02', 9999);
-INSERT INTO `sys_dept` VALUES (102, 100, '0,100', '斯尔邦石化', 2, '斯尔邦石化管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '1', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:32:14', 9999);
-INSERT INTO `sys_dept` VALUES (103, 101, '0,100,101', '信息部', 1, '数智化部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-06-11 00:48:50', 9999);
-INSERT INTO `sys_dept` VALUES (104, 101, '0,100,101', '人力资源部', 2, '人力资源部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:22:53', 9999);
-INSERT INTO `sys_dept` VALUES (105, 101, '0,100,101', '商务部', 3, '商务部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:24:01', 9999);
-INSERT INTO `sys_dept` VALUES (106, 101, '0,100,101', '财务部', 4, '财务部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:24:29', 9999);
-INSERT INTO `sys_dept` VALUES (107, 101, '0,100,101', '总裁办', 5, '总裁办管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:31:05', 9999);
-INSERT INTO `sys_dept` VALUES (108, 102, '0,100,102', '数智化部', 1, '数智化部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '1', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:33:04', 9999);
-INSERT INTO `sys_dept` VALUES (109, 102, '0,100,102', '财务部', 2, '财务部管理员', '13851202705', 'donghaoran@shenghongpec.com', '0', '1', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:33:13', 9999);
+INSERT INTO `sys_dept` VALUES (100, 0, '0', 'Vctgo科技', 0, '数智化部管理员', '13851202705', 'dhr92@163.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-06-11 00:49:10', 9999);
+INSERT INTO `sys_dept` VALUES (101, 100, '0,100', 'Vctgo集团', 1, '数智化部管理员', '13851202705', 'dhr92@163.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-06-11 00:49:02', 9999);
+INSERT INTO `sys_dept` VALUES (102, 100, '0,100', '斯尔邦石化', 2, '斯尔邦石化管理员', '13851202705', 'dhr92@163.com', '0', '1', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:32:14', 9999);
+INSERT INTO `sys_dept` VALUES (103, 101, '0,100,101', '信息部', 1, '数智化部管理员', '13851202705', 'dhr92@163.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-06-11 00:48:50', 9999);
+INSERT INTO `sys_dept` VALUES (104, 101, '0,100,101', '人力资源部', 2, '人力资源部管理员', '13851202705', 'dhr92@163.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:22:53', 9999);
+INSERT INTO `sys_dept` VALUES (105, 101, '0,100,101', '商务部', 3, '商务部管理员', '13851202705', 'dhr92@163.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:24:01', 9999);
+INSERT INTO `sys_dept` VALUES (106, 101, '0,100,101', '财务部', 4, '财务部管理员', '13851202705', 'dhr92@163.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:24:29', 9999);
+INSERT INTO `sys_dept` VALUES (107, 101, '0,100,101', '总裁办', 5, '总裁办管理员', '13851202705', 'dhr92@163.com', '0', '0', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:31:05', 9999);
+INSERT INTO `sys_dept` VALUES (108, 102, '0,100,102', '数智化部', 1, '数智化部管理员', '13851202705', 'dhr92@163.com', '0', '1', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:33:04', 9999);
+INSERT INTO `sys_dept` VALUES (109, 102, '0,100,102', '财务部', 2, '财务部管理员', '13851202705', 'dhr92@163.com', '0', '1', 'admin', '2022-03-07 15:41:18', 'admin', '2022-03-07 18:33:13', 9999);
 COMMIT;
 
 -- ----------------------------
@@ -398,17 +399,18 @@ INSERT INTO `sys_dict_data` VALUES (10, 1, '通知', '1', 'sys_notice_type', '',
 INSERT INTO `sys_dict_data` VALUES (11, 2, '公告', '2', 'sys_notice_type', '', 'success', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '公告');
 INSERT INTO `sys_dict_data` VALUES (12, 1, '正常', '0', 'sys_notice_status', '', 'primary', 'Y', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '正常状态');
 INSERT INTO `sys_dict_data` VALUES (13, 2, '关闭', '1', 'sys_notice_status', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '关闭状态');
-INSERT INTO `sys_dict_data` VALUES (14, 1, '新增', '1', 'sys_oper_type', '', 'info', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '新增操作');
-INSERT INTO `sys_dict_data` VALUES (15, 2, '修改', '2', 'sys_oper_type', '', 'info', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '修改操作');
-INSERT INTO `sys_dict_data` VALUES (16, 3, '删除', '3', 'sys_oper_type', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '删除操作');
-INSERT INTO `sys_dict_data` VALUES (17, 4, '授权', '4', 'sys_oper_type', '', 'primary', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '授权操作');
-INSERT INTO `sys_dict_data` VALUES (18, 5, '导出', '5', 'sys_oper_type', '', 'warning', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '导出操作');
-INSERT INTO `sys_dict_data` VALUES (19, 6, '导入', '6', 'sys_oper_type', '', 'warning', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '导入操作');
-INSERT INTO `sys_dict_data` VALUES (20, 7, '强退', '7', 'sys_oper_type', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '强退操作');
-INSERT INTO `sys_dict_data` VALUES (21, 8, '生成代码', '8', 'sys_oper_type', '', 'warning', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '生成操作');
-INSERT INTO `sys_dict_data` VALUES (22, 9, '清空数据', '9', 'sys_oper_type', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '清空操作');
-INSERT INTO `sys_dict_data` VALUES (23, 1, '成功', '0', 'sys_common_status', '', 'primary', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '正常状态');
-INSERT INTO `sys_dict_data` VALUES (24, 2, '失败', '1', 'sys_common_status', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '停用状态');
+INSERT INTO `sys_dict_data` VALUES (14, 99, '其他', '0', 'sys_oper_type', '', 'info', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '其他操作');
+INSERT INTO `sys_dict_data` VALUES (15, 1, '新增', '1', 'sys_oper_type', '', 'info', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '新增操作');
+INSERT INTO `sys_dict_data` VALUES (16, 2, '修改', '2', 'sys_oper_type', '', 'info', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '修改操作');
+INSERT INTO `sys_dict_data` VALUES (17, 3, '删除', '3', 'sys_oper_type', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '删除操作');
+INSERT INTO `sys_dict_data` VALUES (18, 4, '授权', '4', 'sys_oper_type', '', 'primary', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '授权操作');
+INSERT INTO `sys_dict_data` VALUES (19, 5, '导出', '5', 'sys_oper_type', '', 'warning', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '导出操作');
+INSERT INTO `sys_dict_data` VALUES (20, 6, '导入', '6', 'sys_oper_type', '', 'warning', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '导入操作');
+INSERT INTO `sys_dict_data` VALUES (21, 7, '强退', '7', 'sys_oper_type', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '强退操作');
+INSERT INTO `sys_dict_data` VALUES (22, 8, '生成代码', '8', 'sys_oper_type', '', 'warning', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '生成操作');
+INSERT INTO `sys_dict_data` VALUES (23, 9, '清空数据', '9', 'sys_oper_type', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '清空操作');
+INSERT INTO `sys_dict_data` VALUES (24, 1, '成功', '0', 'sys_common_status', '', 'primary', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '正常状态');
+INSERT INTO `sys_dict_data` VALUES (25, 2, '失败', '1', 'sys_common_status', '', 'danger', 'N', '0', 'admin', '2022-03-07 15:41:18', '', NULL, '停用状态');
 INSERT INTO `sys_dict_data` VALUES (100, 0, '开启', '0', 'sys_tenant_status', 'primary', 'primary', 'N', '0', 'admin', '2022-03-15 16:30:32', 'admin', '2022-03-15 18:42:34', '租户开启状态');
 INSERT INTO `sys_dict_data` VALUES (101, 1, '关闭', '1', 'sys_tenant_status', NULL, 'danger', 'N', '0', 'admin', '2022-03-15 16:30:44', 'admin', '2022-03-15 18:42:59', '租户关闭状态');
 INSERT INTO `sys_dict_data` VALUES (102, 2, '短信通知', '1', 'sys_message_type', NULL, 'info', 'N', '0', 'admin', '2022-04-28 10:59:57', 'admin', '2022-04-28 11:00:41', '');
@@ -462,6 +464,8 @@ CREATE TABLE `sys_logininfor` (
   `access_time` datetime DEFAULT NULL COMMENT '访问时间',
   `tenant_id` bigint(20) NOT NULL COMMENT '租户ID',
   PRIMARY KEY (`info_id`) USING BTREE,
+  KEY `idx_sys_logininfor_s`  (`status`),
+  KEY `idx_sys_logininfor_lt` (`access_time`),
   KEY `idx_logininfo_tenant` (`tenant_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT='系统访问记录';
 
@@ -560,19 +564,20 @@ INSERT INTO `sys_menu` VALUES (1038, '公告修改', 107, 3, '#', '', '', 1, 0, 
 INSERT INTO `sys_menu` VALUES (1039, '公告删除', 107, 4, '#', '', '', 1, 0, 'F', '0', '0', 'system:notice:remove', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1040, '操作查询', 500, 1, '#', '', '', 1, 0, 'F', '0', '0', 'system:operlog:query', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1041, '操作删除', 500, 2, '#', '', '', 1, 0, 'F', '0', '0', 'system:operlog:remove', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1042, '日志导出', 500, 4, '#', '', '', 1, 0, 'F', '0', '0', 'system:operlog:export', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1042, '日志导出', 500, 3, '#', '', '', 1, 0, 'F', '0', '0', 'system:operlog:export', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1043, '登录查询', 501, 1, '#', '', '', 1, 0, 'F', '0', '0', 'system:logininfor:query', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1044, '登录删除', 501, 2, '#', '', '', 1, 0, 'F', '0', '0', 'system:logininfor:remove', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (1045, '日志导出', 501, 3, '#', '', '', 1, 0, 'F', '0', '0', 'system:logininfor:export', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1046, '在线查询', 109, 1, '#', '', '', 1, 0, 'F', '0', '0', 'monitor:online:query', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1047, '批量强退', 109, 2, '#', '', '', 1, 0, 'F', '0', '0', 'monitor:online:batchLogout', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1048, '单条强退', 109, 3, '#', '', '', 1, 0, 'F', '0', '0', 'monitor:online:forceLogout', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1049, '生成查询', 114, 1, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:query', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1050, '生成修改', 114, 2, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:edit', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1051, '生成删除', 114, 3, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:remove', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1052, '导入代码', 114, 2, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:import', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1053, '预览代码', 114, 4, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:preview', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
-INSERT INTO `sys_menu` VALUES (1054, '生成代码', 114, 5, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:code', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+insert into `sys_menu` VALUES (1046, '账户解锁', 501, 4, '#', '', '', 1, 0, 'F', '0', '0', 'system:logininfor:unlock', '#', 'admin', '2022-03-07 15:41:18', '', null, '');
+INSERT INTO `sys_menu` VALUES (1047, '在线查询', 109, 1, '#', '', '', 1, 0, 'F', '0', '0', 'monitor:online:query', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1048, '批量强退', 109, 2, '#', '', '', 1, 0, 'F', '0', '0', 'monitor:online:batchLogout', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1049, '单条强退', 109, 3, '#', '', '', 1, 0, 'F', '0', '0', 'monitor:online:forceLogout', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1050, '生成查询', 114, 1, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:query', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1051, '生成修改', 114, 2, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:edit', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1052, '生成删除', 114, 3, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:remove', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1053, '导入代码', 114, 2, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:import', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1054, '预览代码', 114, 4, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:preview', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (1055, '生成代码', 114, 5, '#', '', '', 1, 0, 'F', '0', '0', 'tool:gen:code', '#', 'admin', '2022-03-07 15:41:18', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (2013, '租户管理', 1, 1, 'tenant', 'system/tenant/index', NULL, 1, 0, 'C', '0', '0', 'system:tenant:list', 'tree', 'admin', '2022-03-15 16:21:49', 'admin', '2022-03-15 16:24:59', '租户管理菜单');
 INSERT INTO `sys_menu` VALUES (2014, '租户管理查询', 2013, 1, '#', '', NULL, 1, 0, 'F', '0', '0', 'system:tenant:query', '#', 'admin', '2022-03-15 16:21:49', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (2015, '租户管理新增', 2013, 2, '#', '', NULL, 1, 0, 'F', '0', '0', 'system:tenant:add', '#', 'admin', '2022-03-15 16:21:49', '', NULL, '');
@@ -655,8 +660,12 @@ CREATE TABLE `sys_oper_log` (
   `status` int(11) DEFAULT '0' COMMENT '操作状态（0正常 1异常）',
   `error_msg` varchar(2000) DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime DEFAULT NULL COMMENT '操作时间',
+  `cost_time` bigint(20) DEFAULT 0 COMMENT '消耗时间',
   `tenant_id` bigint(20) NOT NULL COMMENT '租户ID',
   PRIMARY KEY (`oper_id`) USING BTREE,
+  KEY `idx_sys_oper_log_bt` (`business_type`),
+  KEY `idx_sys_oper_log_s`  (`status`),
+  KEY `idx_sys_oper_log_ot` (`oper_time`),
   KEY `idx_operlog_tenant` (`tenant_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT='操作日志记录';
 
@@ -823,6 +832,7 @@ INSERT INTO `sys_role_menu` VALUES (2, 1051, 9999);
 INSERT INTO `sys_role_menu` VALUES (2, 1052, 9999);
 INSERT INTO `sys_role_menu` VALUES (2, 1053, 9999);
 INSERT INTO `sys_role_menu` VALUES (2, 1054, 9999);
+INSERT INTO `sys_role_menu` VALUES (2, 1055, 9999);
 INSERT INTO `sys_role_menu` VALUES (2, 2037, 9999);
 INSERT INTO `sys_role_menu` VALUES (2, 2038, 9999);
 INSERT INTO `sys_role_menu` VALUES (2, 2039, 9999);
@@ -955,6 +965,187 @@ CREATE TABLE `sys_user_role` (
 
 -- ----------------------------
 -- Records of sys_user_role
+-- ----------------------------
+-- ----------------------------
+-- Table structure for xxl_job_group
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_group`;
+CREATE TABLE `xxl_job_group`  (
+                                  `id` int NOT NULL AUTO_INCREMENT,
+                                  `app_name` varchar(64)  NOT NULL COMMENT '执行器AppName',
+                                  `title` varchar(12)  NOT NULL COMMENT '执行器名称',
+                                  `address_type` tinyint NOT NULL DEFAULT 0 COMMENT '执行器地址类型：0=自动注册、1=手动录入',
+                                  `address_list` text  NULL COMMENT '执行器地址列表，多地址逗号分隔',
+                                  `update_time` datetime NULL DEFAULT NULL,
+                                  `tenant_id` bigint NULL DEFAULT NULL,
+                                  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_group
+-- ----------------------------
+INSERT INTO `xxl_job_group` VALUES (1, 'xxl-job-executor-sample', '示例执行器', 0, 'http://127.0.0.1:9999/', '2023-03-18 20:21:24', 9999);
+
+-- ----------------------------
+-- Table structure for xxl_job_info
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_info`;
+CREATE TABLE `xxl_job_info`  (
+                                 `id` int NOT NULL AUTO_INCREMENT,
+                                 `job_group` int NOT NULL COMMENT '执行器主键ID',
+                                 `job_desc` varchar(255)  NOT NULL,
+                                 `add_time` datetime NULL DEFAULT NULL,
+                                 `update_time` datetime NULL DEFAULT NULL,
+                                 `author` varchar(64)  NULL DEFAULT NULL COMMENT '作者',
+                                 `alarm_email` varchar(255)  NULL DEFAULT NULL COMMENT '报警邮件',
+                                 `schedule_type` varchar(50)  NOT NULL DEFAULT 'NONE' COMMENT '调度类型',
+                                 `schedule_conf` varchar(128)  NULL DEFAULT NULL COMMENT '调度配置，值含义取决于调度类型',
+                                 `misfire_strategy` varchar(50)  NOT NULL DEFAULT 'DO_NOTHING' COMMENT '调度过期策略',
+                                 `executor_route_strategy` varchar(50)  NULL DEFAULT NULL COMMENT '执行器路由策略',
+                                 `executor_handler` varchar(255)  NULL DEFAULT NULL COMMENT '执行器任务handler',
+                                 `executor_param` varchar(512)  NULL DEFAULT NULL COMMENT '执行器任务参数',
+                                 `executor_block_strategy` varchar(50)  NULL DEFAULT NULL COMMENT '阻塞处理策略',
+                                 `executor_timeout` int NOT NULL DEFAULT 0 COMMENT '任务执行超时时间，单位秒',
+                                 `executor_fail_retry_count` int NOT NULL DEFAULT 0 COMMENT '失败重试次数',
+                                 `glue_type` varchar(50)  NOT NULL COMMENT 'GLUE类型',
+                                 `glue_source` mediumtext  NULL COMMENT 'GLUE源代码',
+                                 `glue_remark` varchar(128)  NULL DEFAULT NULL COMMENT 'GLUE备注',
+                                 `glue_updatetime` datetime NULL DEFAULT NULL COMMENT 'GLUE更新时间',
+                                 `child_jobid` varchar(255)  NULL DEFAULT NULL COMMENT '子任务ID，多个逗号分隔',
+                                 `trigger_status` tinyint NOT NULL DEFAULT 0 COMMENT '调度状态：0-停止，1-运行',
+                                 `trigger_last_time` bigint NOT NULL DEFAULT 0 COMMENT '上次调度时间',
+                                 `trigger_next_time` bigint NOT NULL DEFAULT 0 COMMENT '下次调度时间',
+                                 `tenant_id` bigint NULL DEFAULT NULL,
+                                 PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_info
+-- ----------------------------
+INSERT INTO `xxl_job_info` VALUES (1, 1, '测试任务', '2018-11-03 22:21:31', '2023-03-14 08:54:15', '迪卢克', 'weicj0426@163.com', 'CRON', '0/10 * * * * ? *', 'DO_NOTHING', 'FIRST', 'demoJobHandler', '222', 'COVER_EARLY', 60, 0, 'BEAN', '', 'GLUE代码初始化', '2018-11-03 00:00:00', NULL, 0, 0, 0, 9999);
+
+-- ----------------------------
+-- Table structure for xxl_job_lock
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_lock`;
+CREATE TABLE `xxl_job_lock`  (
+                                 `lock_name` varchar(50)  NOT NULL COMMENT '锁名称',
+                                 `tenant_id` bigint NULL DEFAULT NULL,
+                                 PRIMARY KEY (`lock_name`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_lock
+-- ----------------------------
+INSERT INTO `xxl_job_lock` VALUES ('schedule_lock', 9999);
+
+-- ----------------------------
+-- Table structure for xxl_job_log
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_log`;
+CREATE TABLE `xxl_job_log`  (
+                                `id` bigint NOT NULL AUTO_INCREMENT,
+                                `job_group` int NOT NULL COMMENT '执行器主键ID',
+                                `job_id` int NOT NULL COMMENT '任务，主键ID',
+                                `executor_address` varchar(255)  NULL DEFAULT NULL COMMENT '执行器地址，本次执行的地址',
+                                `executor_handler` varchar(255)  NULL DEFAULT NULL COMMENT '执行器任务handler',
+                                `executor_param` varchar(512)  NULL DEFAULT NULL COMMENT '执行器任务参数',
+                                `executor_sharding_param` varchar(20)  NULL DEFAULT NULL COMMENT '执行器任务分片参数，格式如 1/2',
+                                `executor_fail_retry_count` int NOT NULL DEFAULT 0 COMMENT '失败重试次数',
+                                `trigger_time` datetime NULL DEFAULT NULL COMMENT '调度-时间',
+                                `trigger_code` int NOT NULL COMMENT '调度-结果',
+                                `trigger_msg` text  NULL COMMENT '调度-日志',
+                                `handle_time` datetime NULL DEFAULT NULL COMMENT '执行-时间',
+                                `handle_code` int NOT NULL COMMENT '执行-状态',
+                                `handle_msg` text  NULL COMMENT '执行-日志',
+                                `alarm_status` tinyint NOT NULL DEFAULT 0 COMMENT '告警状态：0-默认、1-无需告警、2-告警成功、3-告警失败',
+                                `tenant_id` bigint NULL DEFAULT NULL,
+                                PRIMARY KEY (`id`) USING BTREE,
+                                INDEX `I_trigger_time`(`trigger_time` ASC) USING BTREE,
+                                INDEX `I_handle_code`(`handle_code` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 433 CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_log
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for xxl_job_log_report
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_log_report`;
+CREATE TABLE `xxl_job_log_report`  (
+                                       `id` int NOT NULL AUTO_INCREMENT,
+                                       `trigger_day` datetime NULL DEFAULT NULL COMMENT '调度-时间',
+                                       `running_count` int NOT NULL DEFAULT 0 COMMENT '运行中-日志数量',
+                                       `suc_count` int NOT NULL DEFAULT 0 COMMENT '执行成功-日志数量',
+                                       `fail_count` int NOT NULL DEFAULT 0 COMMENT '执行失败-日志数量',
+                                       `update_time` datetime NULL DEFAULT NULL,
+                                       `tenant_id` bigint NULL DEFAULT NULL,
+                                       PRIMARY KEY (`id`) USING BTREE,
+                                       UNIQUE INDEX `i_trigger_day`(`trigger_day` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 816 CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_log_report
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for xxl_job_logglue
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_logglue`;
+CREATE TABLE `xxl_job_logglue`  (
+                                    `id` int NOT NULL AUTO_INCREMENT,
+                                    `job_id` int NOT NULL COMMENT '任务，主键ID',
+                                    `glue_type` varchar(50)  NULL DEFAULT NULL COMMENT 'GLUE类型',
+                                    `glue_source` mediumtext  NULL COMMENT 'GLUE源代码',
+                                    `glue_remark` varchar(128)  NOT NULL COMMENT 'GLUE备注',
+                                    `add_time` datetime NULL DEFAULT NULL,
+                                    `update_time` datetime NULL DEFAULT NULL,
+                                    `tenant_id` bigint NULL DEFAULT NULL,
+                                    PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_logglue
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for xxl_job_registry
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_registry`;
+CREATE TABLE `xxl_job_registry`  (
+                                     `id` int NOT NULL AUTO_INCREMENT,
+                                     `registry_group` varchar(50)  NOT NULL,
+                                     `registry_key` varchar(255)  NOT NULL,
+                                     `registry_value` varchar(255)  NOT NULL,
+                                     `update_time` datetime NULL DEFAULT NULL,
+                                     `tenant_id` bigint NULL DEFAULT NULL,
+                                     PRIMARY KEY (`id`) USING BTREE,
+                                     INDEX `i_g_k_v`(`registry_group` ASC, `registry_key` ASC, `registry_value` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_registry
+-- ----------------------------
+INSERT INTO `xxl_job_registry` VALUES (12, 'EXECUTOR', 'xxl-job-executor-sample', 'http://127.0.0.1:9999/', '2023-03-18 20:20:57', 9999);
+
+-- ----------------------------
+-- Table structure for xxl_job_user
+-- ----------------------------
+DROP TABLE IF EXISTS `xxl_job_user`;
+CREATE TABLE `xxl_job_user`  (
+                                 `id` int NOT NULL AUTO_INCREMENT,
+                                 `username` varchar(50)  NOT NULL COMMENT '账号',
+                                 `password` varchar(50)  NOT NULL COMMENT '密码',
+                                 `role` tinyint NOT NULL COMMENT '角色：0-普通用户、1-管理员',
+                                 `permission` varchar(255)  NULL DEFAULT NULL COMMENT '权限：执行器ID列表，多个逗号分割',
+                                 `tenant_id` bigint NULL DEFAULT NULL,
+                                 PRIMARY KEY (`id`) USING BTREE,
+                                 UNIQUE INDEX `i_username`(`username` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 ;
+
+-- ----------------------------
+-- Records of xxl_job_user
 -- ----------------------------
 BEGIN;
 INSERT INTO `sys_user_role` VALUES (1, 1, 9999);

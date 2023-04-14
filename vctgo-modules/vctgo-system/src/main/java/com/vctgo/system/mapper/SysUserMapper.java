@@ -120,7 +120,8 @@ public interface SysUserMapper extends BaseMapperX<SysUser>
      * @param userName 用户名称
      * @return 结果
      */
-     int checkUserNameUnique(String userName);
+     @InterceptorIgnore(tenantLine = "1")
+     SysUser checkUserNameUnique(String userName);
 
     /**
      * 校验手机号码是否唯一

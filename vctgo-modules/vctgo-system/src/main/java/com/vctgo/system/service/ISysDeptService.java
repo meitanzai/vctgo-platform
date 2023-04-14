@@ -20,6 +20,15 @@ import com.vctgo.system.domain.vo.TreeSelect;
      List<SysDept> selectDeptList(SysDept dept);
 
     /**
+     * 查询部门树结构信息
+     *
+     * @param dept 部门信息
+     * @return 部门树信息集合
+     */
+    List<TreeSelect> selectDeptTreeList(SysDept dept);
+
+
+    /**
      * 构建前端所需要树结构
      *
      * @param depts 部门列表
@@ -81,7 +90,7 @@ import com.vctgo.system.domain.vo.TreeSelect;
      * @param dept 部门信息
      * @return 结果
      */
-     String checkDeptNameUnique(SysDept dept);
+    boolean checkDeptNameUnique(SysDept dept);
 
     /**
      * 校验部门是否有数据权限

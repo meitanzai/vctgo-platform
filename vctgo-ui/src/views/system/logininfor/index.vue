@@ -38,11 +38,12 @@
         <el-date-picker
           v-model="dateRange"
           style="width: 240px"
-          value-format="yyyy-MM-dd"
+          value-format="yyyy-MM-dd HH:mm:ss"
           type="daterange"
           range-separator="-"
           start-placeholder="开始日期"
           end-placeholder="结束日期"
+          :default-time="['00:00:00', '23:59:59']"
         ></el-date-picker>
       </el-form-item>
       <el-form-item>
@@ -72,6 +73,17 @@
           @click="handleClean"
           v-hasPermi="['system:logininfor:remove']"
         >清空</el-button>
+        <el-col :span="1.5">
+          <el-button
+            type="primary"
+            plain
+            icon="el-icon-unlock"
+            size="mini"
+            :disabled="single"
+            @click="handleUnlock"
+            v-hasPermi="['system:logininfor:unlock']"
+          >解锁</el-button>
+        </el-col>
       </el-col>
       <el-col :span="1.5">
         <el-button
@@ -96,7 +108,7 @@
           <dict-tag :options="dict.type.sys_common_status" :value="scope.row.status"/>
         </template>
       </el-table-column>
-      <el-table-column label="描述" align="center" prop="msg" />
+      <el-table-column label="描述" align="center" prop="msg" :show-overflow-tooltip="true" />
       <el-table-column label="访问时间" align="center" prop="accessTime" sortable="custom" :sort-orders="['descending', 'ascending']" width="180">
         <template slot-scope="scope">
           <span>{{ parseTime(scope.row.accessTime) }}</span>
@@ -115,7 +127,7 @@
 </template>
 
 <script>
-import { list, delLogininfor, cleanLogininfor } from "@/api/system/logininfor";
+import { list, delLogininfor, cleanLogininfor, unlockLogininfor } from "@/api/system/logininfor";
 import {parseTime} from "@/utils/vctgo";
 
 export default {
@@ -127,8 +139,12 @@ export default {
       loading: true,
       // 选中数组
       ids: [],
+      // 非单个禁用
+      single: true,
       // 非多个禁用
       multiple: true,
+      // 选择用户名
+      selectName: "",
       // 显示搜索条件
       showSearch: true,
       // 总条数
@@ -138,7 +154,7 @@ export default {
       // 日期范围
       dateRange: [],
       // 默认排序
-      defaultSort: {prop: 'loginTime', order: 'descending'},
+      defaultSort: {prop: 'accessTime', order: 'descending'},
       // 查询参数
       queryParams: {
         pageNum: 1,
@@ -172,13 +188,16 @@ export default {
     resetQuery() {
       this.dateRange = [];
       this.resetForm("queryForm");
+      this.queryParams.pageNum = 1;
       this.$refs.tables.sort(this.defaultSort.prop, this.defaultSort.order)
-      this.handleQuery();
+      // this.handleQuery();
     },
     /** 多选框选中数据 */
     handleSelectionChange(selection) {
       this.ids = selection.map(item => item.infoId)
+      this.single = selection.length!=1
       this.multiple = !selection.length
+      this.selectName = selection.map(item => item.userName);
     },
     /** 排序触发事件 */
     handleSortChange(column, prop, order) {
@@ -203,6 +222,15 @@ export default {
       }).then(() => {
         this.getList();
         this.$modal.msgSuccess("清空成功");
+      }).catch(() => {});
+    },
+    /** 解锁按钮操作 */
+    handleUnlock() {
+      const username = this.selectName;
+      this.$modal.confirm('是否确认解锁用户"' + username + '"数据项?').then(function() {
+        return unlockLogininfor(username);
+      }).then(() => {
+        this.$modal.msgSuccess("用户" + username + "解锁成功");
       }).catch(() => {});
     },
     /** 导出按钮操作 */

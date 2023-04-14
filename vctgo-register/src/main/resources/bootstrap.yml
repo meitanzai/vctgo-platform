@@ -6,9 +6,9 @@ server:
 db:
   num: 1
   user: ${MYSQL_USER:root}
-  password: ${MYSQL_PWD:root}
+  password: ${MYSQL_PWD:Vctgo2022}
   url:
-    0: jdbc:mysql://${MYSQL_HOST:vctgo-mysql}:${MYSQL_PORT:3306}/${MYSQL_DB:vctgo_config}?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    0: jdbc:mysql://${MYSQL_HOST:donghaoran.mysql.rds.aliyuncs.com}:${MYSQL_PORT:23306}/${MYSQL_DB:vctgo_config}?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
 
 nacos:
   core:

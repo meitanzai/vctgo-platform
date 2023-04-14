@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.vctgo</groupId>
         <artifactId>vctgo</artifactId>
-        <version>1.2.1</version>
+        <version>1.2.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,6 +12,7 @@
         <module>vctgo-common-log</module>
         <module>vctgo-common-core</module>
         <module>vctgo-common-redis</module>
+        <module>ruoyi-common-seata</module>
         <module>vctgo-common-swagger</module>
         <module>vctgo-common-security</module>
         <module>vctgo-common-datascope</module>

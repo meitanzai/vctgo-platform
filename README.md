@@ -4,7 +4,7 @@
 <h4 align="center">基于Ruoyi-Cloud版本改造的的多租户SaaS开发框架。</h4>
 <p align="center">
     <a style="margin-right: 5px">
-       <img src="https://img.shields.io/badge/Vctgo%20Platform-v1.2.1-brightgreen" alt="vctgo-platform">
+       <img src="https://img.shields.io/badge/Vctgo%20Platform-v1.2.2-brightgreen" alt="vctgo-platform">
     </a>
     <a style="margin-right: 5px" href="ttps://www.jetbrains.com/?from=RuoYi-Vue-Plus">
        <img src="https://img.shields.io/badge/IntelliJ%20IDEA-提供支持-blue.svg" alt="IntelliJ-IDEA">
@@ -26,15 +26,11 @@
 
 - 首先感谢若依提供的开源支持!请大家继续关注若依项目!
 
-- 菜盟由来-菜鸟联盟,由当时我和2个好朋友一起拟定的名字 vct代表了我们三个菜鸟的字母,go 代表了我们要菜鸟起飞!
-
 - 本项目基于 [RuoYi-Cloud](https://gitee.com/y_project/RuoYi-Cloud) 进行二次开发的租户版本,主要致力于租户模式和服务治理相关的部分。
 
 - 本项目主要针对企业租户场景开发，脚手架功能同步更新  [RuoYi-Cloud](https://gitee.com/y_project/RuoYi-Cloud)  项目。
 
 - 采用`MIT开源协议`，完全免费给个人及企业使用。
-
-- 项目处于开发阶段，租户的数据权限,服务治理这块还存在一定的缺陷.后续的版本会优先优化此块。因此，目前仅推荐用于学习、毕业设计等个人使用。
 
 #### 友情链接 [若依/RuoYi-Cloud](https://gitee.com/y_project/RuoYi-Cloud) Element UI版本。
 star 别忘点上 :kissing_heart:
@@ -69,12 +65,13 @@ PS:目前已经改成流量计费满速100M,请大家切勿恶意刷流量
 - 5.去除定时任务模块,选择了xxl-job,目前没有加入代码库
 - 6.优化代码生成模块-代码生成默认集成mybatis-plus的CRUD模块
 - 7.添加通知模块,和OSS存储模块,已经集成阿里云短信,后续会集成七牛云和腾讯等第三方
-- 8.等待建议添加....
+- 8.集成xxl-job到系统,重构定时任务管理界面,账号权限通用
+- 9.等待建议添加....
 ## 后续开发任务
 - 1.继续同步RuoYi-Cloud相关版本性更新
 - 2.优化租户增删改查时候的数据处理逻辑,以及租户到期提前一星期通知功能(完成)
-- 3.完善租户模式下的数据权限问题(改造中...)
-- 4.集成阿里云,腾讯云等短信服务,并接入第三方登陆系统,增加短信登陆功能(已完成短信功能,待优化..)
+- 3.完善租户模式下的数据权限问题(完成)
+- 4.集成阿里云,腾讯云等短信服务,并接入第三方登陆系统,增加短信登陆功能(已完成)
 - 5.集成七牛云等云存储
 - 6.租户添加自定义Logo和系统名称,后续考虑集成二级域名登陆租户系统
 - 7.监控功能添加数据库监控和表监控
@@ -87,6 +84,7 @@ PS:目前已经改成流量计费满速100M,请大家切勿恶意刷流量
 ### 请参考保姆级教程  - [Vctgo项目启动教程](https://www.vctgo.cn/archives/vctgo-xiang-mu-qi-dong-jiao-cheng)
 
 ### 其他细节说明
+### 最新更新,项目已内置Nacos,直接启动即可
 #### 1.nacos自行运行 如果是 M1的芯片 会出现内核报错 采用下方nacos镜像即可  docker pull zhusaidong/nacos-server-m1:2.0.3
      - 运行指令如下 
      docker run --name nacos-standalone -e MODE=standalone -e JVM_XMS=512m -e JVM_XMX=512m -e JVM_XMN=256m -p 8848:8848 -d zhusaidong/nacos-server-m1:2.0.3
@@ -97,18 +95,20 @@ PS:目前已经改成流量计费满速100M,请大家切勿恶意刷流量
      - Windows处于 C:\Windows\System32\drivers\etc
      - Linux和Mac都属于 /etc/hosts下
      
-     主要添加以下几个部分,不理解的自行百度,其中127.0.0.1为你自己的本机ip
-     vctgo-platform 127.0.0.1
-     vctgo-nginx 127.0.0.1
-     vctgo-nacos 127.0.0.1
-     vctgo-mysql 127.0.0.1
-     vctgo-gateway 127.0.0.1
-     vctgo-auth 127.0.0.1
-     vctgo-system 127.0.0.1
-     vctgo-file 127.0.0.1
-     vctgo-gen 127.0.0.1
-     vctgo-monitor 127.0.0.1
-     vctgo-redis 127.0.0.1
+    主要添加以下几个部分,不理解的自行百度,其中127.0.0.1为你自己的本机ip
+    127.0.0.1 vctgo-platform 
+    127.0.0.1 vctgo-nginx 
+    127.0.0.1 vctgo-nacos 
+    127.0.0.1 vctgo-mysql 
+    127.0.0.1 vctgo-gateway 
+    127.0.0.1 vctgo-auth 
+    127.0.0.1 vctgo-system 
+    127.0.0.1 vctgo-file 
+    127.0.0.1 vctgo-gen 
+    127.0.0.1 vctgo-monitor 
+    127.0.0.1 vctgo-redis 
+    127.0.0.1 vctgo-job
+    127.0.0.1 vctgo-demo
 
 #### 3.前后端启动说明
      - 1.nacos和mysql以及redis正常运行后 优先启动gateway网关和 auth服务,其他的就可以同时启动了
@@ -187,7 +187,6 @@ com.vctgo
 15. 系统接口：根据业务代码自动生成相关的api接口文档。
 16. 服务监控：监视当前系统CPU、内存、磁盘、堆栈等相关信息。
 17. 在线构建器：拖动表单元素生成相应的HTML代码。
-
 
 
 

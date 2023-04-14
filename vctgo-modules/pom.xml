@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.vctgo</groupId>
         <artifactId>vctgo</artifactId>
-        <version>1.2.1</version>
+        <version>1.2.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -12,6 +12,7 @@
         <module>vctgo-system</module>
         <module>vctgo-gen</module>
         <module>vctgo-file</module>
+        <module>vctgo-job</module>
     </modules>
 
     <artifactId>vctgo-modules</artifactId>
